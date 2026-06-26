@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IDrive – Privacy Policy</title>
+  <style>
+    :root {
+      --navy: #111827;
+      --blue:  #4C7DFF;
+      --text:  #1f2937;
+      --muted: #6b7280;
+      --bg:    #f9fafb;
+      --card:  #ffffff;
+      --border:#e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    header {
+      background: var(--navy);
+      color: #fff;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+    header h1 { font-size: 1.8rem; letter-spacing: -0.5px; }
+    header p  { color: #9ca3af; margin-top: 0.4rem; font-size: 0.9rem; }
+    main {
+      max-width: 780px;
+      margin: 2.5rem auto;
+      padding: 0 1.25rem 4rem;
+    }
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.6rem 1.8rem;
+      margin-bottom: 1.25rem;
+    }
+    h2 {
+      font-size: 1.05rem;
+      color: var(--blue);
+      margin-bottom: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    p, li { font-size: 0.95rem; color: var(--text); }
+    ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.35rem; }
+    .tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .tag-optin  { background:#dbeafe; color:#1d4ed8; }
+    .tag-auto   { background:#f3f4f6; color:#374151; }
+    table { width:100%; border-collapse:collapse; font-size:0.9rem; margin-top:0.5rem; }
+    th, td { text-align:left; padding:0.55rem 0.7rem; border-bottom:1px solid var(--border); }
+    th { font-weight:600; color:var(--muted); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.05em; }
+    tr:last-child td { border-bottom:none; }
+    footer { text-align:center; color:var(--muted); font-size:0.82rem; padding-bottom:2rem; }
+    a { color:var(--blue); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>IDrive — Privacy Policy</h1>
+  <p>Last updated: June 2026</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>1. Overview</h2>
+    <p>IDrive is a driving-safety app that scores your trips, warns you about road hazards, and lets you compete with friends. This policy explains what data the app collects, why, and how you control it. We do not sell your data and we do not show ads.</p>
+  </section>
+
+  <section>
+    <h2>2. Data we collect</h2>
+    <table>
+      <thead>
+        <tr><th>Category</th><th>Data</th><th>When</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Account</strong></td>
+          <td>Email address, display name</td>
+          <td>On sign-up</td>
+        </tr>
+        <tr>
+          <td><strong>Location</strong></td>
+          <td>Precise GPS (lat/lon, bearing, speed, accuracy)</td>
+          <td>During trip recording and on the Home screen (foreground only)</td>
+        </tr>
+        <tr>
+          <td><strong>Motion sensors</strong></td>
+          <td>Accelerometer, gyroscope, linear acceleration</td>
+          <td>During trip recording</td>
+        </tr>
+        <tr>
+          <td><strong>Trip data</strong></td>
+          <td>Score, duration, distance, harsh-event counts, timestamp; raw sensor CSV uploaded to cloud storage</td>
+          <td>At end of each trip</td>
+        </tr>
+        <tr>
+          <td><strong>OBD-II</strong> (optional)</td>
+          <td>Vehicle VIN, diagnostic trouble codes, engine parameters</td>
+          <td>Only when a Bluetooth OBD adapter is connected</td>
+        </tr>
+        <tr>
+          <td><strong>Cooperative hazards</strong> <span class="tag tag-optin">opt-in</span></td>
+          <td>Anonymised location, speed, heading, hazard type — linked to a rotating pseudonym, not your account</td>
+          <td>When a harsh event is detected and you have enabled cooperative warnings</td>
+        </tr>
+        <tr>
+          <td><strong>Leaderboard</strong> <span class="tag tag-optin">opt-in</span></td>
+          <td>Alias (you choose it), level, XP, average score — never trip locations or routes</td>
+          <td>Only after you explicitly join the leaderboard</td>
+        </tr>
+        <tr>
+          <td><strong>Groups &amp; duels</strong> <span class="tag tag-optin">opt-in</span></td>
+          <td>Group name, membership, aggregated trip counts and scores per challenge</td>
+          <td>Only when you create or join a group</td>
+        </tr>
+        <tr>
+          <td><strong>Crash reports</strong> <span class="tag tag-auto">automatic</span></td>
+          <td>Stack traces, device model, OS version (Firebase Crashlytics)</td>
+          <td>If the app crashes</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>3. Background location</h2>
+    <p>IDrive accesses location in the <strong>background</strong> only while a trip recording is actively running (a persistent foreground notification is shown). This is necessary to log the route and compute accurate trip scores. Location access stops the moment you end the trip. We do not track your location at any other time.</p>
+  </section>
+
+  <section>
+    <h2>4. How we use your data</h2>
+    <ul>
+      <li>Compute and display your trip scores and driving history.</li>
+      <li>Detect harsh braking, acceleration, and cornering events to give actionable feedback.</li>
+      <li>Broadcast anonymised hazard events to warn nearby drivers (opt-in only).</li>
+      <li>Power the opt-in leaderboard and group competitions.</li>
+      <li>Diagnose app crashes and improve stability (Crashlytics).</li>
+    </ul>
+    <p style="margin-top:0.8rem;">We do <strong>not</strong> use your data for advertising, profiling, or any purpose beyond what is listed above.</p>
+  </section>
+
+  <section>
+    <h2>5. What we share</h2>
+    <ul>
+      <li><strong>Firebase (Google)</strong> — cloud storage, database, authentication, and crash reporting. Data is processed in accordance with Google's privacy terms.</li>
+      <li><strong>Leaderboard alias + aggregate stats</strong> — visible to other signed-in users only if you opted in. You can leave at any time and all public data is deleted immediately.</li>
+      <li><strong>Cooperative hazard events</strong> — shared anonymously with other nearby users who have enabled cooperative warnings. Events expire automatically after 30 minutes and are never linked to your account.</li>
+    </ul>
+    <p style="margin-top:0.8rem;">No other data is shared with third parties.</p>
+  </section>
+
+  <section>
+    <h2>6. Data retention</h2>
+    <ul>
+      <li>Trip data and sensor CSVs are stored until you delete your account.</li>
+      <li>Cooperative hazard events expire server-side after 30 minutes.</li>
+      <li>Leaderboard entries are deleted immediately when you opt out.</li>
+      <li>Crashlytics data is retained for 90 days per Google's policy.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. Your rights &amp; controls</h2>
+    <ul>
+      <li><strong>Cooperative warnings</strong> — toggle off in app settings at any time. No further hazard data is collected or shared.</li>
+      <li><strong>Leaderboard</strong> — tap "Leave" in the Compete screen. Your public entry is deleted immediately.</li>
+      <li><strong>Groups</strong> — leave or delete any group you own from the Compete screen.</li>
+      <li><strong>Location permission</strong> — revoke via Android Settings at any time. Trip recording requires location; other features continue to work without it.</li>
+      <li><strong>Account deletion</strong> — contact us at the address below to request full deletion of your account and all associated data.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>8. Children</h2>
+    <p>IDrive is not directed at children under 16. We do not knowingly collect data from anyone under 16. If you believe a child has provided us with personal data, please contact us and we will delete it promptly.</p>
+  </section>
+
+  <section>
+    <h2>9. Changes to this policy</h2>
+    <p>We may update this policy as the app evolves. Material changes will be announced inside the app. Continued use after changes constitutes acceptance of the updated policy. The "Last updated" date at the top of this page always reflects the most recent revision.</p>
+  </section>
+
+  <section>
+    <h2>10. Contact</h2>
+    <p>Questions or requests: <a href="mailto:daniel.voinea@unitbv.ro">daniel.voinea@unitbv.ro</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>IDrive &copy; 2026 &mdash; <a href="mailto:daniel.voinea@unitbv.ro">Contact</a></p>
+</footer>
+
+</body>
+</html>
